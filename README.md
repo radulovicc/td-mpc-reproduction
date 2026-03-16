@@ -7,16 +7,22 @@ This repository contains a clean, minimalist implementation of **TD-MPC** (Tempo
 ### HalfCheetah-v5
 The agent reaches an episode reward of over 7000 by around 400k environment steps and maintains stable performance around that value for the remainder of the training (up to 800k steps), indicating successful convergence. Further training does not lead to significant improvement, confirming that the policy has converged. The learning curve is shown below:
 
-![Training curve](figures/training_curve.png)
+<img src="figures/training_curve.png" width="70%">
 
 ### Ablation: Consistency Loss
-Disabling the latent consistency loss (`consistency_coef=0.0`) leads to failure to learn locomotion. The comparison is shown below:
+Disabling latent consistency loss led to significantly better performance (over 9500 reward), at the cost of stability, suggesting that this regularization may not be necessary in state-based tasks.
 
-![Ablation](figures/ablation_consistency.png)
+<img src="figures/ablation_consistency.png" width="70%">
+
 ## Usage
-To train the agent: python train.py
-
-To run an ablation test: python train_ablation.py
+To train the agent: 
+```bash
+python train.py
+```
+To run an ablation test: 
+```bash
+python train_ablation.py
+```
 
 ## Project Structure
 - `agent.py` – TD-MPC agent with MPPI planner and update logic
@@ -27,10 +33,12 @@ To run an ablation test: python train_ablation.py
 - `train_ablation.py` – main training loop for ablation test
 - `utils.py` – helper functions (EMA, linear schedule)
 - `figures/` – result plots (training curve, ablation study)
+- `paper/` – final PDF of the project report
+- `videos/` – demonstration video of the trained agent on HalfCheetah-v5
 
 ## References
 - Hansen, N., Wang, X., & Su, H. (2022). Temporal Difference Learning for Model Predictive Control. *International Conference on Machine Learning (ICML)*.
-- Original codebase: [https://github.com/nicklashansen/td-mpc](https://github.com/nicklashansen/td-mpc)
+- Original codebase: [https://github.com/nicklashansen/tdmpc](https://github.com/nicklashansen/tdmpc)
 
 ## Requirements
 
