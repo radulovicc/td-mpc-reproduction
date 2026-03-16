@@ -58,8 +58,8 @@ def train():
             episode_reward = 0
             episode_step = 0
 
-    print("Trening je završen! Spašavam model...")
+    
     torch.save(agent.model.state_dict(), "tdmpc_cheetah_final.pt") 
-    print("Model uspešno sačuvan kao 'tdmpc_cheetah_final.pt'!")
+    
 if __name__ == "__main__":
     train()

@@ -96,6 +96,6 @@ if __name__ == "__main__":
     model = TOLD(obs_dim=24, action_dim=6, cfg=konfiguracija)
 
 
-    print(f"✅ Model successfully made!")
+    print(f"Model successfully made!")
     print(f"Latent dimension {model.cfg.latent_dim}")
     print(f"Hidden dimension: {model.cfg.hidden_dim}")
