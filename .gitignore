@@ -23,7 +23,6 @@ env/
 *.csv
 wandb/
 logs/
-videos/
 checkpoints/
 results/
 data/
