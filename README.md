@@ -40,6 +40,9 @@ To run an ablation test: python train_ablation.py
 - MuJoCo (install via `pip install mujoco`)
 - wandb (optional, for logging)
 
+### Trained HalfCheetah agent
+[Watch the trained agent in action](videos/halfcheetah-trained.mp4)
+
 Install dependencies:
 ```bash
 pip install -r requirements.txt
